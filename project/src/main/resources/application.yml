@@ -1,0 +1,23 @@
+spring:
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+  h2:
+    console:
+      enabled: true
+#spring.thymeleaf.prefix.classpath=/templates/
+
+#PostgreSQL
+#spring.datasource.url=jdbc:postgresql://localhost:5432/urldb
+#spring.datasource.username=postgres
+#spring.datasource.password=password
+#spring.jpa.hibernate.ddl-auto=update
+
+## Hibernate Properties
+# The SQL dialect makes Hibernate generate better SQL for the chosen database
+#spring.jpa.properties.hibernate.dialect = org.hibernate.dialect.PostgreSQLDialect
+#
+#spring.jpa.show-sql=true
+#spring.jpa.properties.hibernate.format_sql=true
+#
+#server.error.include-binding-errors=always
+#server.error.include-message=always

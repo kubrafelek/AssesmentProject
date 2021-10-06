@@ -22,11 +22,11 @@ public class UrlController {
     @PostMapping("/generate")
     public ResponseEntity<Url> generateShortUrl(@RequestBody UrlDTO urlDTO){
         Optional<Url> resultOptional = urlService.generateShortLink(urlDTO);
-
         return resultOptional.map(url -> new ResponseEntity<>(url, HttpStatus.OK)).orElseGet(() -> new ResponseEntity<>(HttpStatus.BAD_REQUEST));
     }
 
-
-
-
+    @GetMapping("/{shortLink}")
+    public ResponseEntity<Url> redirectToUrl(@PathVariable String shortLink){
+       return redirectToUrl("https://www.tapu.com/l/uygulamaya-ozel-kampanyali-tapular");
+    }
 }
