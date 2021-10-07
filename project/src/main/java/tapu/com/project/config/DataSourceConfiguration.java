@@ -10,8 +10,16 @@ import javax.sql.DataSource;
 @Configuration
 public class DataSourceConfiguration {
 
-    @Bean(name = "h2Datasource")
+    @Bean(name = "postgresqlDatasource")
     @Primary
+    public DataSource postgresqlDatasource(){
+        DataSourceBuilder dataSourceBuilder = DataSourceBuilder.create();
+        dataSourceBuilder.url("jdbc:postgresql://localhost:5432/urldb");
+        dataSourceBuilder.username("postgres");
+        dataSourceBuilder.password("kbr");
+        return dataSourceBuilder.build();
+    }
+
     public DataSource h2Datasource(){
         DataSourceBuilder dataSourceBuilder = DataSourceBuilder.create();
         dataSourceBuilder.driverClassName("org.h2.Driver");
