@@ -9,6 +9,8 @@ import tapu.com.project.dto.UrlDTO;
 import tapu.com.project.model.Url;
 import tapu.com.project.service.UrlService;
 
+import javax.validation.Valid;
+import java.util.List;
 import java.util.Optional;
 
 @RestController
@@ -25,8 +27,21 @@ public class UrlController {
         return resultOptional.map(url -> new ResponseEntity<>(url, HttpStatus.OK)).orElseGet(() -> new ResponseEntity<>(HttpStatus.BAD_REQUEST));
     }
 
-    @GetMapping("/{shortLink}")
-    public ResponseEntity<Url> redirectToUrl(@PathVariable String shortLink){
-       return redirectToUrl("https://www.tapu.com/l/uygulamaya-ozel-kampanyali-tapular");
+    @GetMapping("redirect/{shortLink}")
+    public ResponseEntity<String> redirectToUrl(@PathVariable @Valid String shortLink){
+       return new ResponseEntity<>("https://www.tapu.com/l/uygulamaya-ozel-kampanyali-tapular", HttpStatus.OK);
     }
+
+    @GetMapping("/listAllUrls")
+    public ResponseEntity<List<Url>> listAll() {
+        return new ResponseEntity<>(urlService.listAll(), HttpStatus.OK);
+    }
+
+    @DeleteMapping("/delete/{id}")
+    public ResponseEntity<String> deleteUrl(@PathVariable @Valid long id) {
+        return new ResponseEntity(urlService.deleteById(id), HttpStatus.OK);
+    }
+
+
+
 }

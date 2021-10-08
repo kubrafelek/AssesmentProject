@@ -29,6 +29,13 @@ public class GlobalExceptionHandler {
         AppErrorResponse response = prepareErrorResponse(HttpStatus.BAD_REQUEST, exc.getMessage());
         return new ResponseEntity<>(response, HttpStatus.BAD_REQUEST);
     }
+
+    @ExceptionHandler({UrlIsAlreadyExistException.class})
+    @ResponseStatus(HttpStatus.NOT_FOUND)
+    public ResponseEntity<AppErrorResponse> handleException(UrlIsAlreadyExistException exc){
+        AppErrorResponse response = prepareErrorResponse(HttpStatus.BAD_REQUEST, exc.getMessage());
+        return new ResponseEntity<>(response, HttpStatus.BAD_REQUEST);
+    }
     
     private AppErrorResponse prepareErrorResponse(HttpStatus httpStatus, String message) {
         AppErrorResponse response = new AppErrorResponse();

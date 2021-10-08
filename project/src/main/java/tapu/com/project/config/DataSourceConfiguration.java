@@ -10,14 +10,13 @@ import javax.sql.DataSource;
 @Configuration
 public class DataSourceConfiguration {
 
-    @Bean(name = "h2Datasource")
+    @Bean(name = "mysqlDatasource")
     @Primary
-    public DataSource h2Datasource(){
+    public DataSource mysqlDatasource(){
         DataSourceBuilder dataSourceBuilder = DataSourceBuilder.create();
-        dataSourceBuilder.driverClassName("org.h2.Driver");
-        dataSourceBuilder.url("jdbc:h2:mem:testdb");
-        dataSourceBuilder.username("sa");
-        dataSourceBuilder.password("");
+        dataSourceBuilder.url("jdbc:mysql://localhost:3306/appdb?characterEncoding=UTF8");
+        dataSourceBuilder.username("root");
+        dataSourceBuilder.password("kbr.flk88");
         return dataSourceBuilder.build();
     }
 }

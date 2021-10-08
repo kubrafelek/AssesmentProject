@@ -20,10 +20,7 @@ public class LoginService {
     public void save(LoginDTO loginDTO) {
         mapToDTO(this.loginRepository.save(
                 new Login(
-                        loginDTO.getName(),
                         loginDTO.getUsername(),
-                        loginDTO.getAge(),
-                        loginDTO.getEmail(),
                         loginDTO.getPassword()
                 )
         ));
@@ -32,10 +29,7 @@ public class LoginService {
     public static LoginDTO mapToDTO(Login login) {
         if (login != null) {
             return new LoginDTO(
-                    login.getName(),
                     login.getUsername(),
-                    login.getAge(),
-                    login.getEmail(),
                     login.getPassword()
             );
         }

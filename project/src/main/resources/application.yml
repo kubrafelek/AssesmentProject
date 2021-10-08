@@ -1,10 +1,12 @@
 spring:
-  h2:
-    console:
-      enabled: true
-
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL5Dialect
+    hibernate:
+      ddl-auto: create
+banner:
+  location: banner.txt
 
 server:
   error:
    include-binding-errors: always
-    include-message: always
+   include-message: always
