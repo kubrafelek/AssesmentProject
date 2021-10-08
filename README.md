@@ -61,7 +61,7 @@ Basic Frontend Pages : http://localhost:8080/
 ---
 
 #### Api Documentation
-![](ss/Ekran Resmi 2021-10-07 12.04.53.png)
+![](ss/Ekran%20Resmi%202021-10-07%2012.04.53.png)
 
 #### User post a url and if process is success then, new short url return.
 ![](ss/Ekran%20Resmi%202021-10-07%2011.53.16.png)
