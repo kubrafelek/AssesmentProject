@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="ISO-8859-1">
+    <title>List Users</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
+          integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#"> <a class="nav-link active" href="#" th:href="@{/}">URL Shorter Application
+        </a></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01"
+                aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarColor01">
+            <ul class="navbar-nav me-auto">
+                <li class="nav-item">
+                    <a class="nav-link active" th:href="@{/users}">List of Users</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" th:href="@{/urls}">List of URLs</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" th:href="@{/form}">Generate Short URL</a>
+                </li>
+            </ul>
+        </div>
+
+        <div>
+            <form th:action="@{/logout}" method="post">
+                <p style="color: azure">
+                    Welcome <b>[[${#request.userPrincipal.principal.fullName}]]</b> &nbsp;
+                    <input class="btn btn-danger" type="submit" value="Sign Out"/>
+                </p>
+            </form>
+        </div>
+    </div>
+</nav>
+
+<br/><br/>
+<div class="container text-center">
+    <div>
+        <h3>List of Urls</h3>
+    </div>
+
+    <div>
+        <table class="table table-striped">
+            <thead class="thead-dark">
+            <tr>
+                <th>ID</th>
+                <th>Original URL</th>
+                <th>Short URL</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="url: ${listUrls}">
+                <td th:text="${url.id}"></td>
+                <td th:text="${url.originalUrl}"></td>
+                <td th:text="${url.shortUrl}"></td>
+                <td th:text="${url.user_id}"></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+</body>
+</html>
+
