@@ -1,37 +1,88 @@
-## Gereksinimler
+# Loan Application System - Kredi Başvuru Sistemi
 
-#### - Auction-shortened-url projesi ile kullanıcılar arasında paylaşılan, sistemden kullanıcılara gönderilen email/sms/push notification gibi farklı kanallarda kullanılabilmek üzere url kısaltma servisi geliştirmenizi bekliyoruz.
+<details open="open">
+  <summary>Contents</summary>
+  <ol>
+    <li><a href="#about-the-project">About The Project</a></li>
+    <li><a href="#requirements">Requirements</a></li>
+    <li><a href="#tools-and-technologies">Tools & Technologies</a></li>
+    <li><a href="#model-structure">Model Structure</a></li>
+    <li> <a href="#quick-start">Quick Start</a> </li>
+    <li><a href="#installation">Installation</a></li>
+    <li><a href="#swagger-ui">Swagger UI</a>
+    <li><a href="#authors">Authors</a></li>
+    <li><a href="#license">License</a></li>
+  </ol>
+</details>
 
-#### - Kullanıcı üyelik oluşturur
+## Requirements ♨️
 
-#### - Kullanıcı giriş yapar
+    Assesment requires url shortening service.
+    - User must be able to register or login to system.
+    - User can list all url list.
 
-#### - Kullanıcı kısaltmak istediği URL i sisteme tanımlar, sistem uzun URL in karşılığı olacak şekilde kısa url oluşturur ve kullanıcının kısa urlleri arasına kaydeder.
+## Tools & Technologies ☕
 
-#### Örnek: Kullanıcı url olarak sisteme https://www.tapu.com/l/uygulamaya-ozel-kampanyali-tapular urlini girer, sistem kısa url olarak http://localhost:8080/shortendurl değerini döner.
+     - Spring Boot
+     - Spring Data JPA / Hibernate
+     - Maven
+     - Lombok
+     - Mapstruct
+     - Swagger UI & Postman
+     - JDK 1.8+   
 
-#### - Url kısaltma uygulamasının 8080 de çalışacak şekilde ayarlandığını varsayılmıştır.
+## Model 🌈
+    - User can generate multiple url. (One to Many)
 
-#### - Kullanıcı http://localhost:8080/shortendurl urline girmek istediğinde uygulamanı kullanıcıyı https://www.tapu.com/l/uygulamaya-ozel-kampanyali-tapular linkine yönlendirir.
+## Installation 🔧
 
-#### - Kullanıcı kısaltmış urllerini görüntüleyebilir ve silebilir.
+- Firstly, clone repository
 
-#### - Duplicate kısaltmış url kayıtları oluşması engellenmelidir.
+```
+git clone https://github.com/kubrafelek/AssesmentProject.git 
+```
 
-#### - Uygulama java ve spring boot ile geliştirilmelidir.
+- Install maven for running project
 
-#### - Uygulama için UI geliştirilebilir ya da API üzerinden de çalışabilir
+```
+mvn clean install
+```
 
-#### - Database olarak MySql veya PostgreSQL kullanılmalıdır.
+## Quick Start 💥
 
-#### - Nesneye Yönelik Programlamanın(OOP) temel kavramlarına uygun olarak yazılmalıdır.
+```
+Navigate Swagger UI url:  http://localhost:8080/swagger-ui.html
 
-#### Uygulama 'https://www.heroku.com/' deploy edilmeli(Bonus). 
+Basic Frontend Pages : http://localhost:8080/ 
+```
 
-#### Biz onun üzerinden çalıştırabilmeliyiz. (Heroku tercih sebebi, isterseniz başka bir cloud service de kullanabilirsiniz).
+## Swagger UI Tests 🎉
 
-#### Kaynak kod github ya da bitbucket üzerinden paylaşılmalıdır.
+---
 
-#### Unit ve Integration Test senaryoları yazılmış olmalıdır.
+#### Api Documentation
+![](ss/Ekran Resmi 2021-10-07 12.04.53.png)
 
-#### SOLID ve Clean Code prensiplerine uygun kod yazılmış olmalıdır.
+#### User post a url and if process is success then, new short url return.
+![](ss/Ekran%20Resmi%202021-10-07%2011.53.16.png)
+![](ss/Ekran%20Resmi%202021-10-07%2011.53.28.png)
+
+#### To login the api system authorization token using.
+![](ss/Ekran%20Resmi%202021-10-07%2011.53.45.png)
+![](ss/Ekran%20Resmi%202021-10-07%2011.54.00.png)
+![](ss/Ekran%20Resmi%202021-10-07%2011.54.15.png)
+![](ss/Ekran%20Resmi%202021-10-07%2012.04.00.png)
+![](ss/Ekran%20Resmi%202021-10-07%2012.04.08.png)
+![](ss/Ekran%20Resmi%202021-10-07%2012.04.19.png)
+![](ss/Ekran%20Resmi%202021-10-07%2012.04.27.png)
+
+
+### Authors 📕
+
+* *Kübra Felek* - *Initial work* - [kubrafelek](https://github.com/kubrafelek)
+
+* Happy coding! 😎
+
+### License 📜
+
+MIT License - see the [LICENSE](LICENSE) file for details
