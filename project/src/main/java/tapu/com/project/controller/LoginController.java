@@ -22,6 +22,12 @@ public class LoginController {
         this.loginService = loginService;
     }
 
+    /**
+     * The function return added new user to the application
+     *
+     * @param loginDTO
+     * @return add new user
+     */
     @PostMapping("/sign-up")
     public void signUp(@RequestBody LoginDTO loginDTO) {
         loginDTO.setPassword(bCryptPasswordEncoder.encode(loginDTO.getPassword()));

@@ -21,27 +21,48 @@ public class UrlController {
     @Autowired
     private final UrlService urlService;
 
+    /**
+     * The function return generated short ur
+     *
+     * @param urlDTO
+     * @return short url
+     */
     @PostMapping("/generate")
     public ResponseEntity<Url> generateShortUrl(@RequestBody UrlDTO urlDTO){
         Optional<Url> resultOptional = urlService.generateShortLink(urlDTO);
         return resultOptional.map(url -> new ResponseEntity<>(url, HttpStatus.OK)).orElseGet(() -> new ResponseEntity<>(HttpStatus.BAD_REQUEST));
     }
 
+    /**
+     * The function return original url from coming short url
+     *
+     * @param shortLink
+     * @return original url
+     */
     @GetMapping("redirect/{shortLink}")
     public ResponseEntity<String> redirectToUrl(@PathVariable @Valid String shortLink){
        return new ResponseEntity<>("https://www.tapu.com/l/uygulamaya-ozel-kampanyali-tapular", HttpStatus.OK);
     }
 
+    /**
+     * The function return all urls -
+     *
+     * @return all urls
+     */
     @GetMapping("/listAllUrls")
     public ResponseEntity<List<Url>> listAll() {
         return new ResponseEntity<>(urlService.listAll(), HttpStatus.OK);
     }
 
+    /**
+     * The function return deleted url info
+     *
+     * @param id
+     * @return deleted url id
+     */
     @DeleteMapping("/delete/{id}")
     public ResponseEntity<String> deleteUrl(@PathVariable @Valid long id) {
         return new ResponseEntity(urlService.deleteById(id), HttpStatus.OK);
     }
-
-
 
 }
