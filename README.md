@@ -61,20 +61,20 @@ Basic Frontend Pages : http://localhost:8080/
 ---
 
 #### Api Documentation
-![](ss/Ekran%20Resmi%202021-10-07%2012.04.53.png)
+![](ss/a.png)
 
 #### User post a url and if process is success then, new short url return.
-![](ss/Ekran%20Resmi%202021-10-07%2011.53.16.png)
-![](ss/Ekran%20Resmi%202021-10-07%2011.53.28.png)
+![](ss/b.png)
+![](ss/c.png)
 
 #### To login the api system authorization token using.
-![](ss/Ekran%20Resmi%202021-10-07%2011.53.45.png)
-![](ss/Ekran%20Resmi%202021-10-07%2011.54.00.png)
-![](ss/Ekran%20Resmi%202021-10-07%2011.54.15.png)
-![](ss/Ekran%20Resmi%202021-10-07%2012.04.00.png)
-![](ss/Ekran%20Resmi%202021-10-07%2012.04.08.png)
-![](ss/Ekran%20Resmi%202021-10-07%2012.04.19.png)
-![](ss/Ekran%20Resmi%202021-10-07%2012.04.27.png)
+![](ss/d.png)
+![](ss/e.png)
+![](ss/f.png)
+![](ss/g.png)
+![](ss/h.png)
+![](ss/k.png)
+![](ss/l.png)
 
 
 ### Authors 📕
