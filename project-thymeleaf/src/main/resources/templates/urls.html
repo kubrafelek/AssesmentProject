@@ -57,6 +57,8 @@
                 <th>ID</th>
                 <th>Original URL</th>
                 <th>Short URL</th>
+                <th>User Id</th>
+                <th>Delete</th>
             </tr>
             </thead>
             <tbody>
@@ -64,7 +66,8 @@
                 <td th:text="${url.id}"></td>
                 <td th:text="${url.originalUrl}"></td>
                 <td th:text="${url.shortUrl}"></td>
-                <td th:text="${url.user_id}"></td>
+                <td th:text="${url.user.id}"></td>
+                <td><form th:href="@{/delete/{id}(id=${url.id})}" class="btn btn-danger" method="get"><i class="fa fa-user-times"></i></form></td>
             </tr>
             </tbody>
         </table>
