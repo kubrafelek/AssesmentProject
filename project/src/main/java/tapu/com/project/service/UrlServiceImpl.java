@@ -23,7 +23,7 @@ public class UrlServiceImpl implements UserDetailsService {
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         Login login = loginRepository.findByUsername(username);
         if (login == null) {
-            throw new UsernameNotFoundException(username);
+            throw new UsernameNotFoundException("User name cannot find" + username);
         }
         return new User(login.getUsername(), login.getPassword(), emptyList());
     }

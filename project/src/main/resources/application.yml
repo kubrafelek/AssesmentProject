@@ -1,16 +1,10 @@
 spring:
-  jpa:
-    database-platform: org.hibernate.dialect.PostgreSQLDialect
-    show-sql: true
-    hibernate:
-      ddl-auto: update
-      format_sql: true
   h2:
     console:
       enabled: true
-#spring.thymeleaf.prefix.classpath=/templates/
+
 
 server:
   error:
-    include-binding-errors: always
+   include-binding-errors: always
     include-message: always
