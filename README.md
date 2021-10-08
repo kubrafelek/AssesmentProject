@@ -31,6 +31,10 @@ git clone https://github.com/kubrafelek/AssesmentProject.git
 
 ```
 mvn clean install
+
+cd project -> Swagger Doc.
+
+cd project-thymeleaf -> UI 
 ```
 
 ## Quick Start 💥
@@ -43,23 +47,21 @@ Basic Frontend Pages : http://localhost:8080/
 
 ## Swagger UI Tests 🎉
 
----
+#### -  Api Documentation
+![](ss/a.png)
 
-#### Api Documentation
-    ![](ss/a.png)
+#### - User post a url and if process is success then, new short url return.
+![](ss/b.png)
+![](ss/c.png)
 
-#### User post a url and if process is success then, new short url return.
-    ![](ss/b.png)
-    ![](ss/c.png)
-
-#### To login the api system authorization token using.
-    ![](ss/d.png)
-    ![](ss/e.png)
-    ![](ss/f.png)
-    ![](ss/g.png)
-    ![](ss/h.png)
-    ![](ss/k.png)
-    ![](ss/l.png)
+#### - To login the api system authorization token using.
+![](ss/d.png)
+![](ss/e.png)
+![](ss/f.png)
+![](ss/g.png)
+![](ss/h.png)
+![](ss/k.png)
+![](ss/l.png)
 
 
 ### Authors 📕
