@@ -61,7 +61,20 @@ Basic Frontend Pages : http://localhost:8080/
 ![](ss/g.png)
 ![](ss/h.png)
 ![](ss/k.png)
+
+#### - All url list.
+![](ss/m.png)
+
+#### - Duplicate url cannot be added.
 ![](ss/l.png)
+![](ss/r.png)
+
+#### - Generated short url redirect original url link.
+![](ss/n.png)
+
+#### - Delete url.
+![](ss/o.png)
+![](ss/p.png)
 
 
 ### Authors 📕
